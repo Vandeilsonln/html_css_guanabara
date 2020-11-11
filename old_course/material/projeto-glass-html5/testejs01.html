@@ -7,10 +7,10 @@
         var quebrada = false;
         function mudaLampada(arg) {
             if (!quebrada) {
-                document.getElementById('luz').src=arg;
+                document.getElementById('luz').src='_imagens/' + arg + '.jpg';
             }
             
-            if (arg == '_imagens/lampada-quebrada.jpg') {
+            if (arg == 'lampada-quebrada') {
                 quebrada = true;
             }
         }
@@ -19,7 +19,7 @@
 
 <body>
     <h1>Acenda a Lâmpada</h1>
-    <img src="_imagens/lampada-apagada.jpg" id="luz" onmousemove="mudaLampada('_imagens/lampada-acesa.jpg')" onmouseout="mudaLampada('_imagens/lampada-apagada.jpg')" onclick="mudaLampada('_imagens/lampada-quebrada.jpg')">
+    <img src="_imagens/lampada-apagada.jpg" id="luz" onmousemove="mudaLampada('lampada-acesa')" onmouseout="mudaLampada('lampada-apagada')" onclick="mudaLampada('lampada-quebrada')">
 
 </body>
 
