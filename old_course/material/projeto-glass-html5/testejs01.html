@@ -4,23 +4,22 @@
     <title>Teste JavaScript</title>
     <meta charset="UTF-8">
     <script>
-        function acendeLampada() {
-           document.getElementById('luz').src='_imagens/lampada-acesa.jpg'; 
-        }
-
-        function desligaLampada() {
-            document.getElementById('luz').src='_imagens/lampada-apagada.jpg'
-        }
-
-        function quebraLampada() {
-            document.getElementById('luz').src='_imagens/lampada-quebrada.jpg'
+        var quebrada = false;
+        function mudaLampada(arg) {
+            if (!quebrada) {
+                document.getElementById('luz').src=arg;
+            }
+            
+            if (arg == '_imagens/lampada-quebrada.jpg') {
+                quebrada = true;
+            }
         }
     </script>
 </head>
 
 <body>
     <h1>Acenda a Lâmpada</h1>
-    <img src="_imagens/lampada-apagada.jpg" id="luz" onmousemove="acendeLampada()" onmouseout="desligaLampada()" onclick="quebraLampada()">
+    <img src="_imagens/lampada-apagada.jpg" id="luz" onmousemove="mudaLampada('_imagens/lampada-acesa.jpg')" onmouseout="mudaLampada('_imagens/lampada-apagada.jpg')" onclick="mudaLampada('_imagens/lampada-quebrada.jpg')">
 
 </body>
 
