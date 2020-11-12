@@ -250,3 +250,6 @@ footer#rodape p {
 	text-align: center;
 }
 
+aside#lateral div video#video1 {
+	width: 320px;
+}
